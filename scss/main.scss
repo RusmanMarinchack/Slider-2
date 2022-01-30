@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #260909;
+    padding: 20px;
+}
+
+.slider{
+    &__title{
+        color: white;
+        font-size: 45px;
+        border-bottom: 2px solid white;
+    }
+    .wrapper{
+        display: flex;
+        &__item{
+            height: 80vh;
+            flex: 1;
+            position: relative;
+            margin: 10px;
+            border-radius: 8px;
+            transition: all 0.5s ease-out;
+            cursor: pointer;
+            &.active{
+                flex: 10;
+            }
+            &.active .w-item-title{
+                opacity: 1;
+            }
+            .w-item-title{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                color: rgb(184, 173, 173);
+                font-size: 45px;
+                margin: 20px;
+                opacity: 0;
+            }
+        }
+    }
+}
